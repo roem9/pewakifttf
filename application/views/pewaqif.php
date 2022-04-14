@@ -248,10 +248,10 @@ var pp = {"ajax_url":"https:\/\/tamantahfidzfirdaus.org\/wp-admin\/admin-ajax.ph
 								<table id="dataTable" class="table card-table table-vcenter text-nowrap text-dark">
 									<thead>
 										<tr>
-											<th class="text-dark desktop w-1" style="font-size: 11px">Tgl Waqaf</th>
-											<th class="text-dark desktop" style="font-size: 11px">Nama Waqif</th>
+											<th class="text-dark desktop w-1" style="font-size: 11px">Tgl Wakaf</th>
+											<th class="text-dark desktop mobile-p mobile-l tablet-l tablet-p" style="font-size: 11px">Nama Pewakif</th>
 											<th class="text-dark desktop w-1" style="font-size: 11px">Nominal</th>
-											<th class="text-dark desktop w-1" style="font-size: 11px">Volunteer</th>
+											<!-- <th class="text-dark desktop w-1" style="font-size: 11px">Volunteer</th> -->
 										</tr>
 									</thead>
 								</table>

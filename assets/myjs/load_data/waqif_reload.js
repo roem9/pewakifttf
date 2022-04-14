@@ -21,7 +21,7 @@ var datatable = $('#dataTable').DataTable({
         }},
         {"data": "nama_waqif"},
         {"data": "nominal", render: $.fn.dataTable.render.number( '.', ',', 0, 'Rp ' )},
-        {"data": "nama_volunteer"},
+        // {"data": "nama_volunteer"},
     ],
     rowCallback: function(row, data, iDisplayIndex) {
         var info = this.fnPagingInfo();
