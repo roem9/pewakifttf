@@ -7,6 +7,7 @@ class Waqif_model extends MY_Model {
     public function load_waqif(){
         $this->datatables->select("id_waqif, tgl_waqaf, nama_waqif, no_wa, email, nominal, nama_volunteer");
         $this->datatables->from("waqif");
+        $this->db->order_by("id_waqif, tgl_waqaf", "desc");
         $this->datatables->add_column("sertifikat", "<a href='".base_url()."sertifikat/no/$1' target='_blank' class='btn btn-success'>".tablerIcon('certificate', '')."</a>", "md5(id_waqif)");
         $this->datatables->add_column('menu','
                 <span class="dropdown">

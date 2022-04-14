@@ -7,8 +7,6 @@ var datatable = $('#dataTable').DataTable({
                 api.search(this.value).draw();
         });
     },
-    
-    ordering: false,
     oLanguage: {
     sProcessing: "loading..."
     },
@@ -20,9 +18,16 @@ var datatable = $('#dataTable').DataTable({
             return tgl_indo(data)
         }},
         {"data": "nama_waqif"},
+        {"data": "no_wa"},
         {"data": "nominal", render: $.fn.dataTable.render.number( '.', ',', 0, 'Rp ' )},
         {"data": "nama_volunteer"},
+        {"data": "sertifikat"},
+        {"data": "menu", render : function (data) {
+            if(jQuery.browser.mobile == true) return data
+            else return "<center>"+data+"</center>"
+        }},
     ],
+    order: [[0, 'desc']],
     rowCallback: function(row, data, iDisplayIndex) {
         var info = this.fnPagingInfo();
         var page = info.iPage;
@@ -31,6 +36,7 @@ var datatable = $('#dataTable').DataTable({
     },
     "columnDefs": [
     { "searchable": false, "targets": "" },  // Disable search on first and last columns
+    { "targets": [5, 6], "orderable": false},
     ],
     "rowReorder": {
         "selector": 'td:nth-child(0)'
